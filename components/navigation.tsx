@@ -64,8 +64,9 @@ export function Navigation() {
         <div className="flex items-center gap-2 md:hidden">
           <ThemeToggleButton />
           <Button
-            variant="ghost"
+            variant="outline"
             size="icon"
+            className="bg-transparent transition-all"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="메뉴 열기"
           >
