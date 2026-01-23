@@ -143,7 +143,7 @@ try {
       "기프티콘 관리 및 공유 애플리케이션입니다. 흩어져 있는 기프티콘을 한 곳에서 간편하게 관리하고 주변 매장 알림을 통해 효율적으로 사용할 수 있습니다.",
     period: "2025.04 - 2025.05",
     teamSize: "6명 (프론트엔드 3, 백엔드 3)",
-    githubUrl: "https://github.com/username/ai-chat",
+    githubUrl: "https://github.com/jaemoon99/achacha",
     liveUrl: "https://play.google.com/store/apps/details?id=com.koup28.achacha_app&hl=ko",
     image: "/achacha.png",
     architecture: "/achacha-architecture.png",
