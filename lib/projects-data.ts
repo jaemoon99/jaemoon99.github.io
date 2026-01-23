@@ -439,7 +439,7 @@ const program = new anchor.Program(idl, provider);
     title: "GrimTalk",
     overview:
       "그림을 배우고 싶고 본인의 그림 실력으로 수익을 창출하고 싶은 사람들을 위한 플랫폼입니다. 라이브 스트리밍을 통해 실시간으로 그림을 배우고 완성된 작품은 AI 기반 유사도 분석을 통해 본인의 실력을 평가받을 수 있습니다.",
-    period: "2023.03 - 2023.04",
+    period: "2025.01 - 2025.02",
     teamSize: "6명 (프론트엔드 3, 백엔드 3)",
     githubUrl: "https://github.com/color-chill-guys/grimtalk",
     image: "/grimtalk.png",
