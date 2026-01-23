@@ -2,7 +2,7 @@ import type { ProjectDetail } from "@/app/projects/[slug]/project-detail-client"
 
 export const projectsData: ProjectDetail[] = [
   {
-    slug: "Design-Sink",
+    slug: "dsink",
     title: "Design Sink",
     overview:
       "인테리어 홍보 사이트입니다. 디자인부터 배포까지 전 과정을 담당했으며 관리자 페이지를 통해 인테리어 사진을 관리할 수 있습니다.",
@@ -137,7 +137,7 @@ try {
     ],
   },
   {
-    slug: "Achacha",
+    slug: "achacha",
     title: "아차차",
     overview:
       "기프티콘 관리 및 공유 애플리케이션입니다. 흩어져 있는 기프티콘을 한 곳에서 간편하게 관리하고 주변 매장 알림을 통해 효율적으로 사용할 수 있습니다.",
@@ -318,7 +318,7 @@ private BooleanExpression expiryCondition(boolean includeExpired, QGifticon qGif
     ],
   },
   {
-    slug: "Uptention",
+    slug: "uptention",
     title: "Uptention",
     overview:
       "솔라나 기반 기업용 업무 집중 애플리케이션입니다. 업무 중 디지털 디톡스를 통해 코인을 획득하고 이를 활용해 기업 내 복지 혜택을 누릴 수 있습니다.",
@@ -435,7 +435,7 @@ const program = new anchor.Program(idl, provider);
     ],
   },
   {
-    slug: "GrimTalk",
+    slug: "grimtalk",
     title: "GrimTalk",
     overview:
       "그림을 배우고 싶고 본인의 그림 실력으로 수익을 창출하고 싶은 사람들을 위한 플랫폼입니다. 라이브 스트리밍을 통해 실시간으로 그림을 배우고 완성된 작품은 AI 기반 유사도 분석을 통해 본인의 실력을 평가받을 수 있습니다.",
