@@ -54,7 +54,7 @@ export const projectsData: ProjectDetail[] = [
       {
         title: "JPQL 기반 페이지네이션 무한 스크롤 구현",
         description:
-          "Pageable/Sort와 Slice를 활용해 무한 스크롤을 구현했으며 Slice로 불필요한 count 쿼리를 제거하고 hasNext로 다음 페이지 로딩 여부를 판단했습니다.",
+          "Pageable, Sort, Slice를 활용해 무한 스크롤을 구현했으며 불필요한 count 쿼리를 제거하고 hasNext로 다음 페이지 로딩 여부를 판단했습니다.",
       },
       {
         title: "Spring Security 기반 인증/인가 구현",
