@@ -61,7 +61,7 @@ export function HeroSection({
           {/* Text Content */}
           <div className="space-y-2 text-center lg:text-left lg:col-span-2">
             <h2 className="text-2xl font-light text-muted-foreground">
-              &quot;Why&quot;를 쌓는 개발자
+              <strong>&quot;Why&quot;</strong>를 쌓는 개발자
             </h2>
 
             <div className="flex flex-col lg:flex-row lg:items-end lg:gap-4 items-center justify-center lg:justify-start">
@@ -75,10 +75,10 @@ export function HeroSection({
 
             <div className="space-y-3">
               <p className="text-lg text-primary text-pretty">{title}</p>
-              <p className="text-muted-foreground leading-relaxed text-pretty whitespace-pre-wrap">
-                {description}
-              </p>
-            </div>
+              <p
+                className="text-muted-foreground leading-relaxed text-pretty whitespace-pre-wrap"
+                dangerouslySetInnerHTML={{ __html: description }}
+              ></p>            </div>
 
             {/* Contact Links */}
             <TooltipProvider>
