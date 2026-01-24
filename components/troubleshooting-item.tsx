@@ -69,11 +69,14 @@ export function TroubleshootingItem({
   };
 
   return (
-    <Card className="border-border/50 bg-card overflow-hidden">
-      <CardHeader
-        className="cursor-pointer transition-colors hover:bg-secondary/50"
-        onClick={() => setIsExpanded((v) => !v)}
-      >
+    <Card
+      className={cn(
+        "border-border/50 bg-card overflow-hidden transition-colors transition-shadow",
+        !isExpanded && "cursor-pointer hover:bg-secondary/50"
+      )}
+      onClick={() => setIsExpanded((v) => !v)}
+    >
+      <CardHeader>
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/10">
