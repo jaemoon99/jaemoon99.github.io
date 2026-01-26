@@ -161,13 +161,14 @@ export function TroubleshootingItem({
 
                       <div
                         className="h-64 overflow-auto cursor-pointer p-4 pr-6"
-                        onClick={() =>
+                        onClick={(e) => {
+                          e.stopPropagation();
                           handleCodeBlockClick(
                             "Before",
                             beforeCode,
                             beforeLanguage || "tsx",
-                          )
-                        }
+                          );
+                        }}
                       >
                         <CodeBlock
                           code={beforeCode}
@@ -211,13 +212,14 @@ export function TroubleshootingItem({
 
                       <div
                         className="h-64 overflow-auto cursor-pointer p-4 pr-6"
-                        onClick={() =>
+                        onClick={(e) => {
+                          e.stopPropagation();
                           handleCodeBlockClick(
                             "After",
                             afterCode,
                             afterLanguage || "tsx",
-                          )
-                        }
+                          );
+                        }}
                       >
                         <CodeBlock
                           code={afterCode}
@@ -284,7 +286,10 @@ export function TroubleshootingItem({
           open={!!dialogContent}
           onOpenChange={(open) => !open && setDialogContent(null)}
         >
-          <DialogContent className="sm:max-w-6xl h-[80vh] flex flex-col">
+          <DialogContent
+            onClick={(e) => e.stopPropagation()}
+            className="sm:max-w-6xl h-[80vh] flex flex-col"
+          >
             <DialogHeader>
               <DialogTitle>{dialogContent.title} Code</DialogTitle>
             </DialogHeader>
