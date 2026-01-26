@@ -59,7 +59,7 @@ export function HeroSection({
       <div className="mx-auto max-w-6xl px-6 py-20">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-50 items-start">
           {/* Text Content */}
-          <div className="space-y-2 text-center lg:text-left lg:col-span-2">
+          <div className="space-y-2 text-center lg:text-left lg:col-span-2 order-2 lg:order-1">
             <h2 className="text-2xl font-light text-muted-foreground">
               <strong>&quot;Why&quot;</strong>를 쌓는 개발자
             </h2>
@@ -155,7 +155,7 @@ export function HeroSection({
           </div>
 
           {/* Profile Image (✅ hydration-safe) */}
-          <div className="justify-self-end w-[180px]">
+          <div className="justify-self-center lg:justify-self-end w-[180px] order-1 lg:order-2">
             <div className="rounded-lg p-0.5 border border-muted-foreground/20 dark:border-slate-700 shadow-sm">
               <div className="relative aspect-[3/4] rounded-md overflow-hidden bg-background">
                 {/* Light */}
