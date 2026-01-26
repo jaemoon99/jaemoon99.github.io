@@ -123,3 +123,26 @@
     @apply bg-background text-foreground;
   }
 }
+
+.codeblock pre {
+  margin: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  white-space: pre !important;
+  overflow: visible !important;
+}
+
+.codeblock table {
+  display: inline-block !important;
+  border-collapse: collapse !important;
+  min-width: max-content !important;
+}
+
+.codeblock td {
+  vertical-align: top !important;
+}
+
+.codeblock code {
+  white-space: pre !important;
+}

@@ -1,12 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import {
   ChevronDown,
@@ -72,7 +67,7 @@ export function TroubleshootingItem({
     <Card
       className={cn(
         "border-border/50 bg-card overflow-hidden transition-colors transition-shadow",
-        !isExpanded && "cursor-pointer hover:bg-secondary/50"
+        !isExpanded && "cursor-pointer hover:bg-secondary/50",
       )}
       onClick={() => setIsExpanded((v) => !v)}
     >
@@ -106,12 +101,13 @@ export function TroubleshootingItem({
       <div
         className={cn(
           "grid transition-all duration-300 ease-in-out",
-          isExpanded ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+          isExpanded
+            ? "grid-rows-[1fr] opacity-100"
+            : "grid-rows-[0fr] opacity-0",
         )}
       >
         <div className="overflow-hidden">
           <CardContent className="pt-5 pb-6 space-y-6">
-            {/* Problem */}
             <div className="space-y-2">
               <div className="flex items-center gap-2 text-destructive">
                 <AlertCircle className="h-4 w-4" />
@@ -120,7 +116,6 @@ export function TroubleshootingItem({
               <p className="text-sm text-muted-foreground pl-6">{problem}</p>
             </div>
 
-            {/* Cause */}
             <div className="space-y-2">
               <div className="flex items-center gap-2 text-yellow-600 dark:text-yellow-500">
                 <AlertCircle className="h-4 w-4" />
@@ -129,7 +124,6 @@ export function TroubleshootingItem({
               <p className="text-sm text-muted-foreground pl-6">{cause}</p>
             </div>
 
-            {/* Solution */}
             <div className="space-y-2">
               <div className="flex items-center gap-2 text-green-600 dark:text-green-500">
                 <CheckCircle2 className="h-4 w-4" />
@@ -138,18 +132,17 @@ export function TroubleshootingItem({
               <p className="text-sm text-muted-foreground pl-6">{solution}</p>
             </div>
 
-            {/* Before/After Code */}
             {(beforeCode || afterCode) && (
               <div className="grid gap-4 md:grid-cols-2">
                 {beforeCode && (
-                  <div className="space-y-2">
+                  <div className="space-y-2 min-w-0">
                     <div className="flex items-center justify-between">
                       <span className="text-xs font-medium text-destructive bg-destructive/10 px-2 py-1 rounded">
                         BEFORE
                       </span>
                     </div>
 
-                    <div className="group relative rounded-lg border border-border bg-secondary/50">
+                    <div className="group relative rounded-lg border border-border bg-secondary/50 overflow-hidden">
                       <div
                         className="absolute top-2 right-2 z-10 p-1.5 rounded-md bg-background/50 cursor-pointer opacity-0 group-hover:opacity-100 transition-opacity"
                         onClick={(e) => {
@@ -157,7 +150,7 @@ export function TroubleshootingItem({
                           handleCodeBlockClick(
                             "Before",
                             beforeCode,
-                            beforeLanguage || "tsx"
+                            beforeLanguage || "tsx",
                           );
                         }}
                         role="button"
@@ -167,12 +160,12 @@ export function TroubleshootingItem({
                       </div>
 
                       <div
-                        className="h-64 overflow-auto cursor-pointer"
+                        className="h-64 overflow-auto cursor-pointer p-4 pr-6"
                         onClick={() =>
                           handleCodeBlockClick(
                             "Before",
                             beforeCode,
-                            beforeLanguage || "tsx"
+                            beforeLanguage || "tsx",
                           )
                         }
                       >
@@ -180,15 +173,11 @@ export function TroubleshootingItem({
                           code={beforeCode}
                           language={beforeLanguage || "tsx"}
                           theme={codeTheme}
+                          showLineNumbers
                           customStyle={{
                             fontSize: "0.875rem",
-                            background: "transparent",
-                            border: "none",
-                            padding: "1rem",
-                            margin: 0,
                             overflow: "initial",
                           }}
-                          showLineNumbers
                         />
                       </div>
                     </div>
@@ -196,14 +185,14 @@ export function TroubleshootingItem({
                 )}
 
                 {afterCode && (
-                  <div className="space-y-2">
+                  <div className="space-y-2 min-w-0">
                     <div className="flex items-center justify-between">
                       <span className="text-xs font-medium text-green-600 dark:text-green-500 bg-green-500/10 px-2 py-1 rounded">
                         AFTER
                       </span>
                     </div>
 
-                    <div className="group relative rounded-lg border border-border bg-secondary/50">
+                    <div className="group relative rounded-lg border border-border bg-secondary/50 overflow-hidden">
                       <div
                         className="absolute top-2 right-2 z-10 p-1.5 rounded-md bg-background/50 cursor-pointer opacity-0 group-hover:opacity-100 transition-opacity"
                         onClick={(e) => {
@@ -211,7 +200,7 @@ export function TroubleshootingItem({
                           handleCodeBlockClick(
                             "After",
                             afterCode,
-                            afterLanguage || "tsx"
+                            afterLanguage || "tsx",
                           );
                         }}
                         role="button"
@@ -221,12 +210,12 @@ export function TroubleshootingItem({
                       </div>
 
                       <div
-                        className="h-64 overflow-auto cursor-pointer"
+                        className="h-64 overflow-auto cursor-pointer p-4 pr-6"
                         onClick={() =>
                           handleCodeBlockClick(
                             "After",
                             afterCode,
-                            afterLanguage || "tsx"
+                            afterLanguage || "tsx",
                           )
                         }
                       >
@@ -234,15 +223,11 @@ export function TroubleshootingItem({
                           code={afterCode}
                           language={afterLanguage || "tsx"}
                           theme={codeTheme}
+                          showLineNumbers
                           customStyle={{
                             fontSize: "0.875rem",
-                            background: "transparent",
-                            border: "none",
-                            padding: "1rem",
-                            margin: 0,
                             overflow: "initial",
                           }}
-                          showLineNumbers
                         />
                       </div>
                     </div>
@@ -251,7 +236,6 @@ export function TroubleshootingItem({
               </div>
             )}
 
-            {/* Before/After Images */}
             {(beforeImage || afterImage) && (
               <div className="grid gap-4 md:grid-cols-2">
                 {beforeImage && (
@@ -295,7 +279,6 @@ export function TroubleshootingItem({
         </div>
       </div>
 
-      {/* Dialog */}
       {dialogContent && (
         <Dialog
           open={!!dialogContent}
@@ -306,18 +289,17 @@ export function TroubleshootingItem({
               <DialogTitle>{dialogContent.title} Code</DialogTitle>
             </DialogHeader>
 
-            <div className="flex-1 overflow-auto -mx-6 -mb-6">
+            <div className="flex-1 overflow-auto -mx-6 -mb-6 p-6">
               <CodeBlock
                 code={dialogContent.code}
                 language={dialogContent.language}
                 theme={codeTheme}
                 showLineNumbers
-                wrapLines
                 customStyle={{
                   height: "100%",
                   fontSize: "0.875rem",
                   margin: 0,
-                  padding: "1.5rem",
+                  overflow: "initial",
                 }}
               />
             </div>
