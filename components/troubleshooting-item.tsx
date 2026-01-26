@@ -186,6 +186,7 @@ export function TroubleshootingItem({
                             border: "none",
                             padding: "1rem",
                             margin: 0,
+                            overflow: "initial",
                           }}
                           showLineNumbers
                         />
@@ -239,6 +240,7 @@ export function TroubleshootingItem({
                             border: "none",
                             padding: "1rem",
                             margin: 0,
+                            overflow: "initial",
                           }}
                           showLineNumbers
                         />
