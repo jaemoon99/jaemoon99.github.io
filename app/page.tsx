@@ -12,7 +12,7 @@ import { SkillCard } from "@/components/skill-card";
 
 const experiences = [
   {
-    period: "2025.05 ~ 2025.07",
+    period: "2025.07 ~ 2025.09",
     title: "Design Sink",
     organization: "외주 프로젝트",
   },

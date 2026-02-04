@@ -6,7 +6,7 @@ export const projectsData: ProjectDetail[] = [
     title: "Design Sink",
     overview:
       "인테리어 홍보 사이트입니다. 디자인부터 배포까지 전 과정을 담당했으며 관리자 페이지를 통해 인테리어 사진을 관리할 수 있습니다.",
-    period: "2025.05 - 2025.07",
+    period: "2025.07 - 2025.09",
     teamSize: "1명",
     githubUrl: "https://github.com/designsink",
     liveUrl: "https://dsink.kr/",
