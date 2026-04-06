@@ -41,6 +41,7 @@ export interface ProjectDetail {
   reason?: string;
   period: string;
   teamSize: string;
+  contribution?: number;
   githubUrl?: string;
   liveUrl?: string;
   image?: string;

@@ -17,6 +17,7 @@ export interface ProjectCardProps {
   liveUrl?: string;
   githubUrl?: string;
   period?: string;
+  contribution?: number;
 }
 
 export function ProjectCard({
@@ -28,6 +29,7 @@ export function ProjectCard({
   liveUrl,
   githubUrl,
   period,
+  contribution,
 }: ProjectCardProps) {
   const router = useRouter();
 
@@ -77,8 +79,16 @@ export function ProjectCard({
 
           </div>
         </div>
-        {period && (
-          <p className="mb-2 text-xs text-muted-foreground">{period}</p>
+        {(period || contribution) && (
+          <div className="mb-2 flex items-center gap-2 text-xs text-muted-foreground">
+            {period && <span>{period}</span>}
+            {contribution !== undefined && (
+              <>
+                {period && <span className="text-border">|</span>}
+                <span>기여도 {contribution}%</span>
+              </>
+            )}
+          </div>
         )}
         <p className="mb-4 line-clamp-2 text-sm leading-relaxed text-muted-foreground">
           {description}

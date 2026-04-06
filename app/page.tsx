@@ -197,6 +197,7 @@ export default function PortfolioPage() {
                 liveUrl={project.liveUrl}
                 githubUrl={project.githubUrl}
                 period={project.period}
+                contribution={project.contribution}
               />
             ))}
           </div>
