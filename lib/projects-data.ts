@@ -570,7 +570,3 @@ Sending Excalidraw Data: {
 export function getProjectBySlug(slug: string): ProjectDetail | undefined {
   return projectsData.find((p) => p.slug === slug);
 }
-
-export function getAllProjectSlugs(): string[] {
-  return projectsData.map((p) => p.slug);
-}
